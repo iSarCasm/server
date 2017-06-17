@@ -49,6 +49,6 @@ end
 EventMachine.run do
   Signal.trap("INT")  { EventMachine.stop }
   Signal.trap("TERM") { EventMachine.stop }
-  EventMachine.start_server("127.0.0.1", PORT, EchoServer, server)
+  EventMachine.start_server("0.0.0.0", PORT, EchoServer, server)
   EM.add_periodic_timer(0.05) { server.think }
 end
