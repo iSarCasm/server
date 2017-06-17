@@ -16,7 +16,7 @@ require 'eventmachine'
 Thread::abort_on_exception = true
 # UDP
 s = UDPSocket.new
-s.bind(nil, 44544)
+s.bind('0.0.0.0', 44544)
 
 Thread.start do
   loop do
