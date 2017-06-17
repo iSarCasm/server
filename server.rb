@@ -5,7 +5,7 @@ class Server
   end
 
   def think
-    @last += @last
+    @last += Time.now
   end
 end
 
